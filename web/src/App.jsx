@@ -7,6 +7,12 @@ import {
 	UserButton,
 } from "@clerk/clerk-react";
 
+/**
+ * Renders the main application interface.
+ * 
+ * Displays a greeting header, with sign-in and sign-up buttons for unauthenticated users,
+ * and a user profile button with welcome message for authenticated users.
+ */
 function App() {
 	return (
 		<>

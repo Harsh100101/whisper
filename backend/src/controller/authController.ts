@@ -3,7 +3,11 @@ import type { AuthRequest } from "../middleware/auth";
 import { User } from "../models/User";
 import { clerkClient, getAuth } from "@clerk/express";
 
-// todo: add the next later
+/**
+ * Retrieves and returns the currently authenticated user.
+ *
+ * Responds with HTTP 200 and the user object if found, or HTTP 404 with an error message if not found.
+ */
 export async function getMe(
 	req: AuthRequest,
 	res: Response,
@@ -25,6 +29,12 @@ export async function getMe(
 	}
 }
 
+/**
+ * Finds or creates a User record based on the authenticated Clerk user ID.
+ *
+ * If no Clerk user ID is present, responds with a 401 status. Otherwise, retrieves an existing user
+ * or creates a new record using data from Clerk.
+ */
 export async function authCallback(
 	req: Request,
 	res: Response,
