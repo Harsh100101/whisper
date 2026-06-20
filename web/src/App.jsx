@@ -7,6 +7,10 @@ import {
 	UserButton,
 } from "@clerk/clerk-react";
 
+/**
+ * Renders the application's main page with authentication-aware UI.
+ * @returns {React.ReactNode} The root application component.
+ */
 function App() {
 	return (
 		<>
